@@ -18,13 +18,13 @@ class ShortController extends Controller
 
         $url = short::create([
             'long_url'=>$request->long_url,
-            'short_url'=> Str::random(8),
+            'short_url'=> Str::random(5),
         ]);
         $with = [
             'long_url' => $url
         ];
 
-        return redirect('/')->with('success','short.local/gt/'.$url->short_url);
+        return redirect('/')->with('success','short.local/gt/341'.$url->short_url);
 
     }
 }
